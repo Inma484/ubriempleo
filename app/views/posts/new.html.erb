@@ -1,0 +1,26 @@
+<section id="site-body">
+<div>
+	<%= image_tag 'probando.jpg', width:"100%", height:"150", margin: 'auto' %>
+</div>
+	<% if Empresa.exists?(:user_id => current_user.id)%>
+		<div class="editar">
+			<%= render 'form', post: @post %>
+		</div>
+		<div class="volver">
+			<%= link_to 'Volver', posts_path, id:'volver'%>	
+		</div>
+	<%else%>
+		<p id="info">Debe rellenar su perfil antes de publicar una oferta de empleo. <%= link_to 'Crear perfil', new_empresa_path%></p>
+	<% end -%>
+
+	<%# if Empresa.exists?(:user_id => current_user.id)
+		<%= render 'form', post: @post 
+	<%else
+		<%= render 'form', empresa: @empresa
+	<% end -%>
+</section>
+
+
+
+
+

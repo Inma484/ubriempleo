@@ -1,0 +1,86 @@
+<%= form_for(curriculum) do |f| %>
+  <% if curriculum.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% if @curriculum.errors.any?%>
+      <% curriculum.errors.full_messages.each do |message| %>
+        <div class="message"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><%= message %></div>
+      <% end %>
+      <% end -%>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="editar-avatar">
+    <%= f.label :avatar,'Selecciona una imagen:'%>
+    <%= f.file_field :avatar%>
+  </div>
+  <br>
+  <fieldset class="infop">
+    <legend><i class="fa fa-user" aria-hidden="true"></i> Informacion Personal</legend>
+    <div class="nombre">
+      <div>
+        <%= f.label :name,'Nombre' %><br>
+        <%= f.text_field :name, class: "campo" %>
+      </div>
+      <div>
+        <%= f.label :apellido_1, 'Primer apellido' %><br>
+        <%= f.text_field :apellido_1, class: "campo" %>
+      </div> 
+      <div>
+        <%= f.label :apellido_2, 'Segundo apellido' %><br>
+        <%= f.text_field :apellido_2, class: "campo" %>
+      </div>
+    </div>
+    <div class="direccion">
+      <%= f.label :direccion, 'Dirección' %>
+      <%= f.text_field :direccion, class:"campodir" %>
+    </div>
+
+    <div class="datos">
+      <div>
+        <i class="fa fa-phone" aria-hidden="true"></i> <%= f.label :phone, 'Teléfono' %>
+        <%= f.text_field :phone, class:"campodat" %>
+      </div>
+      <div>
+        <i class="fa fa-envelope" aria-hidden="true"></i> <%= f.label :email %>
+        <%= f.text_field :email, class:"campodat" %>
+      </div>
+    </div>
+    <div class="fecha">
+      <i class="fa fa-calendar" aria-hidden="true"></i>  <%= f.label :fecha_nac, 'Fecha de nacimiento' %>
+      <%= f.date_select :fecha_nac,{:use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'],:order=> [:day, :month, :year],:start_year=>1950}, class:'campofecha' %>
+    </div>
+  </fieldset>
+
+  <fieldset class="infop">
+    <legend><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia Laboral</legend>
+      <p id="cargo">Escribe sus tres últimos empleos, con el siguiente orden (Puesto, Empresa, duración fecha) Ejemplo: Maquinista, UbriquePiel.sl, 1 año, Enero 2015-Enero 2016)</p>
+      <%= f.text_field :cargo1, class:'campocargo' %><br>
+      <%= f.text_field :cargo2 , class:'campocargo' %><br>
+      <%= f.text_field :cargo3, class:'campocargo'  %><br>
+  </fieldset>
+
+  <fieldset class="infop">
+    <legend><i class="fa fa-graduation-cap" aria-hidden="true"></i> Formación Académica</legend>
+    <p id="cargo">(Opcional) Estudios más relevantes.</p>
+      <%= f.text_field :estudios1, class:'campocargo' %><br>
+      <%= f.text_field :estudios2 , class:'campocargo' %><br>
+  </fieldset>
+  <fieldset class="infop">
+    <legend><i class="fa fa-info" aria-hidden="true"></i> Información Adicional</legend>
+    <p id="cargo">Añada a su currículo otros datos de interés, como idiomas, capacidades, aptitudes, disponibilidad... Ejemplo: Idioma: Inglés Medio.(Recuerde teclear intro cada vez que introduzca cualquier tipo de información).</p>
+      <%= f.text_area :datos_i, class:'campoinfoa'%>
+  </fieldset>
+
+  <fieldset class="infop">
+    <legend>Categoría Profesional</legend>
+    <p id="cargo">Seleccione UNA categoría profesional para que su currículo pueda ser buscado y/o encontrado por nuestas empresas clientes, según su categoría.</p>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {},{class:"campocat"})%> 
+  </fieldset>
+  <br>
+  <div class="actions">
+    <%= f.submit "Hecho", class:"botoncv" %>
+  </div>
+  <br>
+<% end %>

@@ -1,0 +1,32 @@
+<div class="box">
+    <h2 id="ini-sesion"><i class="fa fa-user-circle ini-sesion"></i> Iniciar Sesión</h2>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div id="ini-sesion">
+        <i id = icon class="fa fa-envelope" ></i>
+        <%= f.email_field :email, autofocus: true, placeholder: "Email",class:"inicio" %>
+      </div>
+
+      <div id="ini-sesion">
+      <br />
+        <i id = icon class="fa fa-key" ></i>
+        <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña (6 carácteres mínimos)",class:"inicio" %>
+      </div>
+
+      <br/>
+      <% if devise_mapping.rememberable?%>
+        <div id="ini-sesion">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me, 'Recordar Contraseña' %>
+        </div>
+      <% end -%>
+
+      <div id="ini-sesion">
+        <%= f.submit "Iniciar Sesión" , class:"boton"%>
+      </div>
+    <% end %>
+
+    <div class="actions" >
+      <%= render "users/shared/links" %>
+    </div>
+</div>
+

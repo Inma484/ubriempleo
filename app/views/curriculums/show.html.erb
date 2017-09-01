@@ -1,0 +1,65 @@
+<section id="site-body">
+    
+  <div class="w3-card-2 avatar">
+    <%= image_tag(@curriculum.avatar.url(:original),  class:"w3-round center",style:"width:30%") %><br>
+
+    <fieldset class="infop">
+      <legend id="infoper"><i class="fa fa-user" aria-hidden="true"></i> Información Personal</legend>
+        <div class="info-personal">
+            <%= @curriculum.name %> <%= @curriculum.apellido_1 %> <%= @curriculum.apellido_2 %><br>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <%= @curriculum.direccion %><br>
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <%= @curriculum.phone %><br>
+
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <%= @curriculum.email %><br>
+
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <%= @curriculum.fecha_nac.strftime"%d-%m-%y" %><br>
+        </div>
+    </fieldset>
+    
+    <fieldset class="infop">
+      <legend id="infoper"><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia Laboral</legend>
+      <div class="info-personal">
+        <% unless @curriculum.cargo1.nil? %>
+          <%= @curriculum.cargo1 %>
+        <%end%>
+        <% unless @curriculum.cargo2.nil? %><br>
+          <%= @curriculum.cargo2 %>
+        <%end%>
+        <% unless @curriculum.cargo3.nil? %><br>
+          <%= @curriculum.cargo3 %>
+        <%end%>
+        
+      </div>
+    </fieldset>
+    <%unless @curriculum.estudios1.nil? or @curriculum.estudios2.nil?%>
+      <fieldset class="infop">
+        <legend id="infoper"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Formación Académica</legend>
+        <div class="info-personal">
+          <% unless @curriculum.estudios1.nil? %>
+            <%= @curriculum.estudios1 %>
+          <%end%>
+          <% unless @curriculum.estudios2.nil? %><br>
+            <%= @curriculum.estudios2 %>
+          <%end%>
+        </div>
+      </fieldset>
+    <% end -%>
+
+    <fieldset class="infop">
+      <legend id="infoper"><i class="fa fa-info" aria-hidden="true"></i> Información Adicional</legend>
+        <div class="info-personal"><pre><%= @curriculum.datos_i %></pre></div>
+    </fieldset>
+    <div class="edicion">
+    <% if can? :update, Curriculum%>
+      <div class="items"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <%= link_to 'Editar perfil', edit_curriculum_path(@curriculum) %> </div>
+    <% end %>
+    <% if can? :destroy, Curriculum%>
+      <div class="items"><i class="fa fa-trash-o" aria-hidden="true"></i> <%= link_to 'Eliminar perfil', curriculum_path(@curriculum), method: :delete, data: { confirm: 'Estas seguro?'} %></div>
+    <% end %>
+  </div>
+</section>
+

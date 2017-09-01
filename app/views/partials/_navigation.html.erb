@@ -1,0 +1,27 @@
+<nav class="navbar">
+        <ul >
+          <% if user_signed_in? %>
+            <% if current_user.role== 'empresa'%>
+              <li><%= link_to "Mis Ofertas de Empleo", posts_path %></li>
+              <li><%= link_to 'Nueva Oferta', new_post_path %></li>
+              <li><%= link_to 'Candidatos', curriculums_path %></li>
+              <li><%= link_to 'Mi prefil', empresas_path %></li>
+            <% end %>
+            <%if current_user.role == 'trabajador'%>
+              <li><%= link_to "Ofertas de Empleo", posts_path %></li>
+              <li><%= link_to "Buscar Empleo por Categorias", categories_path%> </li>
+              <li><%= link_to 'Empresas', empresas_path %></li>
+              <li><%= link_to 'Mi Perfil', curriculums_path %></li>
+            <% end %>
+             <%if current_user.role == 'admin'%>
+              <li><%= link_to "Ofertas de Empleo", posts_path %></li>
+              <li><%= link_to 'Empresas', empresas_path %></li>
+              <li><%= link_to 'Candidatos', curriculums_path %></li>
+            <% end %>
+            <li style="float: right;"><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
+
+          <%else%>
+            <li style="float: right;" ="float:right"><%= link_to "INICIAR SESIÓN", new_user_session_path %></li>
+          <% end %>
+        </ul>
+</nav>

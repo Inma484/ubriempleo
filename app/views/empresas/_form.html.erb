@@ -1,0 +1,56 @@
+<%= form_for(empresa) do |f| %>
+
+    <div id="error_explanation">
+      <ul>
+      <% if @empresa.errors.any?%>
+      <% empresa.errors.full_messages.each do |message| %>
+        <div class="message"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><%= message %></div>
+      <% end %>
+      <% end -%>
+      </ul>
+    </div>
+
+
+  <div class="editar-avatar">
+    <%= f.label :logo,'Suba su logo:'%>
+    <%= f.file_field :logo%>
+  </div>
+  <br>
+  <fieldset class="infop">
+    <legend ><i class="fa fa-info" aria-hidden="true"></i> Datos de la Empresa</legend>
+    <div class="direccion">
+      <%= f.label :name, 'Nombre de la Empresa' %>
+      <%= f.text_field :name, class:"campodir"%>
+    </div>
+    <div class="direccion">
+      <i class="fa fa-map-marker" aria-hidden="true"></i> <%= f.label :direccion %>
+      <%= f.text_field :direccion, class:"campodir" %>
+    </div>
+    <div class="datos">
+      <div>
+        <i class="fa fa-envelope" aria-hidden="true"></i> <%= f.label :email %>
+        <%= f.text_field :email, class:"campodat" %>
+      </div>
+
+      <div>
+        <i class="fa fa-external-link" aria-hidden="true"> </i><%= f.label :web %>
+        <%= f.text_field :web, class:"campodat"%>
+      </div>
+
+      <div>
+        <i class="fa fa-phone" aria-hidden="true"></i> <%= f.label :phone, 'Teléfono' %>
+        <%= f.text_field :phone, class:"campodat" %>
+      </div>
+    </div>
+
+    <div class="direccion">
+      <%= f.label :descripcion, 'Añada una pequeña descripción de su empresa' %>
+      <%= f.text_area :descripcion, class:"campoinfoa", placeholder:"Nos dedicamos a la fabricación de artículos de piel desde..." %>
+    </div>
+  </fieldset>
+  <br>
+  <div class="actions">
+    <%= f.submit "Hecho", class:"botoncv"%>
+  </div>
+  <br>
+<% end %>

@@ -1,0 +1,34 @@
+<%= form_for(@post) do |f| %>
+    <div id="error_explanation">
+      <ul>
+      <% if @post.errors.any?%>
+      <% post.errors.full_messages.each do |message| %>
+        <div class="message"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><%= message %></div>
+      <% end %>
+      <% end -%>
+      </ul>
+    </div>
+
+  <fieldset class="titulo">
+    <div>
+      <%= f.label :Titulo, "Título" %>
+      <%= f.text_field :title, class:'campo'%>
+    </div>
+    <br>
+    <div >
+      <%= f.label :Descripcion, "Datos del Puesto:" %>
+      <p id="cargo">Descripción del puesto de trabajo: funciones específicas del puesto de trabajo a desempeñar, perfil del candidato ideal, condiciones laborales ofrecidas (salario, duración,..) </p>
+      <%= f.text_area :body, class:'campoinfoa' %>
+    </div>
+
+    <div>
+      <%= f.label :Categoria %>
+      <%= f.collection_select :category_id, Category.all, :id, :name, {}, {class:"campocat"}%> 
+    </div>
+  </fieldset>
+
+  
+  <div class="actions">
+    <%= f.submit 'Hecho', class:'botoncv' %>
+  </div>
+<% end %>

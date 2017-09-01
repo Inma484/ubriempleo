@@ -1,0 +1,44 @@
+<section id = "site-body">
+	<legend id="listado"><%= @post.title%></legend>
+	<article id= "post">
+		<p id = "link">
+			<%if Empresa.exists?(@empresa.user_id == @post.user_id)%>
+				<%=  link_to  @empresa.name, @empresa, :class => "link"%>
+			<%end%>&nbsp|&nbsp
+			<%if @post.created_at < @post.updated_at %>
+				 Actualizado!! <%= @post.updated_at.strftime"%d-%m-%y" %>
+			<%else%>
+				<%= @post.created_at.strftime"%d-%m-%y" %>
+			<% end -%>
+		<p/>
+
+		<div id = "descripcion">
+			<strong>Datos del Puesto:</strong><br/>
+				<%= @post.body %>
+		</div>
+		<div id="categoria">
+			<%unless @post.category_id.nil?%>
+				<%= link_to @post.category.name, @category, :class => "categoria"%>
+		<%end%>
+		</div>
+		
+	</article>
+	
+	
+	<div class="edicion">
+		<% if can? :update, Post%>
+			<div class="items">
+				<i class="fa fa-pencil-square-o" aria-hidden="true"> </i><%= link_to 'Editar', edit_post_path(@post) %>
+			</div>
+		<% end %>
+		<% if can? :destroy, Post%>
+			<div class="items">
+				<i class="fa fa-trash-o" aria-hidden="true"></i> <%= link_to 'Eliminar', post_path(@post), method: :delete, data: { confirm: 'Estas seguro?'} %> 
+			</div>
+		<% end %>
+	</div>
+	<div class="volver">
+		<%= link_to 'Volver', posts_path, :id => "volver"%>
+	</div>
+	
+</section>

@@ -1,0 +1,132 @@
+<section id="site-body">
+        <%if current_user.role == 'trabajador'%>
+          <%if Curriculum.exists?(:user_id => current_user.id)%>
+            <% controller.redirect_to (@curriculum)%>
+          <%else%>
+            <%=  controller.redirect_to new_curriculum_path %>
+          <%end%>
+        <% end %>
+
+      <%if can? :read, Curriculum and current_user.role == 'empresa' or current_user.role == 'admin'%>
+        <legend id= "listado"> Buscar candidatos por categorías profesionales</legend>
+      <div class="flex-container">
+        <div class="polaroid flex-item">
+          <% @category = Category.find(1)%>
+          <%= image_tag 'encargado.jpg',  margin: 'auto' %>
+          <div class="container">
+            <%= link_to @category.name, @category%>
+          </div>
+        </div>
+        <div class="polaroid flex-item">
+          <% @category = Category.find(2)%>
+          <%= image_tag 'analista.jpg',  margin: 'auto'%>
+          <div class="container">
+            <%= link_to @category.name, @category%>
+          </div>
+        </div>
+        
+        <div class="polaroid flex-item">
+          <% @category = Category.find(3)%>
+          <%= image_tag 'patrinist.jpg', margin: 'auto'%>
+          <div class="container">
+            <%= link_to @category.name, @category%>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div class="polaroid flex-item">
+          <% @category = Category.find(4)%>
+          <%= image_tag 'administrativo.jpg',width:"285", height:"120", margin: 'auto'%>
+          <div class="container">
+            <%= link_to @category.name, @category%>
+          </div>
+        </div>
+        <div class="polaroid flex-item">
+          <% @category = Category.find(5)%>
+          <%= image_tag 'Auxiliar_Administrativo.jpg', width:"285", height:"120", margin: 'auto'%>
+          <div class="container">
+            <%= link_to @category.name, @category%>
+          </div>
+        </div>
+        
+        <div class="polaroid flex-item">
+          <% @category = Category.find(6)%>
+          <%= image_tag 'Ayudante.jpg', width:"285", height:"120", margin: 'auto'%>
+          <div class="container">
+            <%= link_to @category.name, @category%>
+          </div>
+        </div>
+      </div>  
+
+      <div class="flex-container">
+          <div class="polaroid flex-item">
+            <% @category = Category.find(7)%>
+            <%= image_tag 'control-calidad.jpg',width:"285", height:"120", margin: 'auto' %>
+            <div class="container">
+              <%= link_to @category.name, @category%>
+            </div>
+          </div>
+          <div class="polaroid flex-item">
+            <% @category = Category.find(8)%>
+            <%= image_tag 'viajante.jpg', width:"285", height:"120", margin: 'auto'%>
+            <div class="container">
+              <%= link_to @category.name, @category%>
+            </div>
+          </div>
+          
+          <div class="polaroid flex-item">
+            <% @category = Category.find(9)%>
+            <%= image_tag 'Cortador.jpg', width:"285", height:"120", margin: 'auto'%>
+            <div class="container">
+              <%= link_to @category.name, @category%>
+            </div>
+          </div>
+      </div>  
+      <div class="flex-container">
+          <div class="polaroid flex-item">
+            <% @category = Category.find(10)%>
+            <%= image_tag 'montador.jpg', width:"285", height:"120", margin: 'auto'%>
+            <div class="container">
+              <%= link_to @category.name, @category%>
+            </div>
+          </div>
+          <div class="polaroid flex-item">
+            <% @category = Category.find(11)%>
+            <%= image_tag 'Costurera.jpg', width:"285", height:"120", margin: 'auto'%>
+            <div class="container">
+              <%= link_to @category.name, @category%>
+            </div>
+          </div>
+          
+          <div class="polaroid flex-item">
+            <% @category = Category.find(12)%>
+            <%= image_tag 'rebajet.jpg',width:"285", height:"120", margin: 'auto'%>
+            <div class="container">
+              <%= link_to @category.name, @category%>
+            </div>
+          </div>
+      </div> 
+
+      <div class="flex-container">
+          <div class="polaroid flex-item">
+            <% @category = Category.find(13)%>
+            <%= image_tag 'peon.jpg', width:"285", height:"120", margin: 'auto'%>
+            <div class="container">
+              <%= link_to @category.name, @category%>
+            </div>
+          </div>
+          <div class="polaroid flex-item">
+            <% @category = Category.find(14)%>
+            <%= image_tag 'conductor.jpg', width:"285", height:"120", margin: 'auto'%>
+            <div class="container">
+              <%= link_to @category.name, @category%>
+            </div>
+          </div>
+          <div class="polaroid flex-item">
+          </div>
+      </div>
+    <% end %>
+</section>
+
+
