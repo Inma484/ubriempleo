@@ -1,4 +1,6 @@
-<nav class="navbar">
+<header>
+  
+  <nav >
         <ul >
           <% if user_signed_in? %>
             <% if current_user.role== 'empresa'%>
@@ -24,4 +26,6 @@
             <li style="float: right;" ="float:right"><%= link_to "INICIAR SESIÓN", new_user_session_path %></li>
           <% end %>
         </ul>
-</nav>
+</nav> 
+</header>
+

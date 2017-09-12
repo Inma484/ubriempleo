@@ -3,25 +3,22 @@ html{
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: 'Roboto', sans-serif;
-	height: 100%;
-	box-sizing: border-box;
 	position: relative;
+	box-sizing: border-box;
+
 
 }
 *,
 *:before,
-*:after {
-  box-sizing: inherit;
+*:after{
+	box-sizing: inherit;
 }
 
+
 body{
-	position: relative;
-	font-family: 'Roboto', sans-serif;
-	font-style: normal;
-	min-height: 100%;
-	width: 100%;
-	text-rendering: optimizeLegibility;
-	margin-top: 60px;
+font-family: 'Roboto', sans-serif;
+position: relative;
+text-rendering: optimizeLegibility;
 
 }
 footer{
@@ -36,50 +33,42 @@ footer{
 
 
 }
+header{
+	width: 100%;
+}
 
-.navbar  nav,ul{
+header nav {
 	list-style-type: none;
+	margin: none;
 	margin: 0;
-	overflow: hidden;
-	background-color:#2F2F2F;
 	top: 0;
+	background-color:#2F2F2F;
 	overflow: hidden;
 	position: fixed;
 	width: 100%;
-	z-index: 9999;
-	color: white;
 	a:hover{
 		color: #4c6a92;}
 	a:visited{
 	text-decoration: none;}
-	li:hover{border-bottom: 3px solid #4c6a92;}
 
 }
-.navbar li{
-	display: inline;
+header nav ul {
+	text-decoration: none;
+	overflow: hidden;
+	list-style: none;
+}
+header nav ul li{
 	float: left;
 	text-decoration: none;
 	
 }
-.navbar li a{
+header nav ul li a{
 	display: block;
+	color: white;
 	text-align: center;
 	padding: 14px 24px;
 	text-decoration: none;
 	font-size: 15px;
-}
-@media screen and (max-width: 828px){
-	.navbar nav , ul{
-		width: 80%;
-		height: 100%;
-		margin: 0;
-		position: fixed;
-	}
-	.navbar nav ul li{
-		display: block;
-		float: none;
-		border-bottom-color: 1px solid rgba(255,255,255,.3)
-	}
 }
 
 
@@ -165,7 +154,7 @@ footer{
 	box-sizing: border-box;
 	max-width: 900px;
 	width: 100%;
-	margin:  0 auto;
+	margin:  70px auto;
 	background-color: white;
 	font-size: 36px;
 	margin-bottom: 60px;
@@ -401,7 +390,7 @@ footer{
 	width: 100%;
 	padding: 0;
 	margin-bottom: 20px;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: inherit;
 	color: #333;
 	border:0;

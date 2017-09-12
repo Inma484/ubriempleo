@@ -1,9 +1,6 @@
 <section id = "site-body">
-  <% if current_user.role == "empresa"%>
-    <legend id="listado">Mis Ofertas de Empleo</legend>
-  <% else%>
     <%= image_tag 'ofertas.jpg', width:"100%", height:"100%", margin: 'auto' %>
-  <% end %>
+  
         <% @posts.each do |post| %>
             <article id="post">
               <% if can? :read, Post and current_user == post.user and current_user.role == "empresa" %> 
@@ -15,9 +12,7 @@
                 </p>
                 <div class= "iconover">
                   <%= link_to raw('<i class="fa fa-eye" aria-hidden="true"></i>'), post%>
-                </div>
-            
-
+  
               <% else if current_user.role == "trabajador" or current_user.role == "admin" %>
                 <div style="text-align: left; font-size: 18px"><%= link_to post.title, post, class:"link"%>  |  <i class="fa fa-calendar" aria-hidden="true"></i> 
                 <%if post.created_at < post.updated_at %>
