@@ -1,0 +1,492 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"str",
+				"string"
+			],
+			[
+				"comm",
+				"comment"
+			],
+			[
+				"co",
+				"comments"
+			],
+			[
+				"Comm",
+				"comment"
+			],
+			[
+				"ar",
+				"article_id"
+			],
+			[
+				"crea",
+				"create"
+			],
+			[
+				"e",
+				"except"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"art",
+				"article"
+			],
+			[
+				"un",
+				"unless\tunless … end"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"min",
+				"minimum"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"s",
+				"style\tAttr"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"ba",
+				"background-attachment"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"form",
+				"form_for"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"h",
+				"h1\tTag"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"c",
+				"class\tAttr"
+			],
+			[
+				"hea",
+				"header\tTag"
+			],
+			[
+				"a",
+				"article"
+			],
+			[
+				"Comentar",
+				"Comentarista"
+			],
+			[
+				"come",
+				"comment"
+			],
+			[
+				"t",
+				"td\tTag"
+			],
+			[
+				"els",
+				"else"
+			],
+			[
+				"up",
+				"update"
+			],
+			[
+				"pa",
+				"params"
+			],
+			[
+				"fin",
+				"find"
+			],
+			[
+				"arti",
+				"articles_path"
+			],
+			[
+				"A",
+				"Article"
+			],
+			[
+				"com",
+				"comentario"
+			],
+			[
+				"Coment",
+				"comentario"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "_form.html.erb",
+			"settings":
+			{
+				"buffer_size": 670,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html.erb",
+			"settings":
+			{
+				"buffer_size": 528,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Sites/webpage",
+		"/C/Sites/webpage/app",
+		"/C/Sites/webpage/app/assets",
+		"/C/Sites/webpage/app/assets/stylesheets",
+		"/C/Sites/webpage/app/controllers",
+		"/C/Sites/webpage/app/models",
+		"/C/Sites/webpage/app/views",
+		"/C/Sites/webpage/app/views/articles",
+		"/C/Sites/webpage/app/views/layouts",
+		"/C/Sites/webpage/app/views/partials",
+		"/C/Sites/webpage/app/views/welcome",
+		"/C/Sites/webpage/config"
+	],
+	"file_history":
+	[
+		"/C/Sites/webpage/Gemfile",
+		"/C/Sites/pagina/app/views/layouts/application.html.erb",
+		"/C/Sites/pagina/config/routes.rb",
+		"/C/Sites/pagina/app/views/welcome/index.html.erb",
+		"/C/Sites/webpage/app/controllers/comments_controller.rb",
+		"/C/Sites/webpage/app/controllers/articles_controller.rb",
+		"/C/Sites/webpage/app/models/user.rb",
+		"/C/Sites/webpage/app/models/comment.rb",
+		"/C/Sites/webpage/db/schema.rb",
+		"/C/Sites/webpage/app/views/comments/edit.html.erb",
+		"/C/Sites/webpage/app/views/comments/new.html.erb",
+		"/C/Sites/webpage/app/views/comments/shoe.html.erb",
+		"/C/Sites/webpage/app/views/articles/show.html.erb",
+		"/C/Sites/webpage/app/views/comments/_form.html.erb",
+		"/C/Sites/webpage/app/views/comments/index.json.jbuilder",
+		"/C/Sites/webpage/app/views/comments/show.json.jbuilder",
+		"/C/Sites/webpage/config/routes.rb",
+		"/C/Sites/webpage/app/assets/stylesheets/style.scss",
+		"/C/Sites/webpage/db/migrate/20160921172443_create_comments.rb",
+		"/C/Sites/webpage/app/views/layouts/application.html.erb",
+		"/C/Sites/webpage/db/migrate/20161108183101_add_user_id_to_articles.rb",
+		"/C/Sites/webpage/app/views/welcome/index.html.erb",
+		"/C/Sites/webpage/app/views/devise/sessions/new.html.erb",
+		"/C/Sites/webpage/app/views/partials/_navigation.html.erb",
+		"/C/Sites/webpage/app/views/devise/registrations/new.html.erb",
+		"/C/Sites/webpage/app/models/article.rb",
+		"/C/Sites/webpage/app/views/articles/index.html.erb",
+		"/C/Sites/webpage/db/migrate/20161108152217_devise_create_users.rb",
+		"/C/Sites/webpage/app/views/articles/new.html.erb",
+		"/C/Sites/webpage/app/views/articles/_form.html.erb",
+		"/C/Sites/webpage/app/views/articles/edit.html.erb",
+		"/C/Sites/webpage/app/assets/stylesheets/flexboxgrid.css",
+		"/C/Sites/webpage/app/assets/javascripts/application.js",
+		"/C/Sites/webpage/app/assets/stylesheets/application.css",
+		"/C/Sites/webpage/app/views/comments/_comment.html.erb",
+		"/C/Sites/webpage/db/migrate/20160921155625_create_articles.rb",
+		"/C/Sites/webpage/config/database.yml",
+		"/C/Sites/webpage/app/assets/stylesheets/comments.scss",
+		"/C/Sites/webapp/app/models/article.rb",
+		"/C/Sites/webapp/config/routes.rb",
+		"/C/Sites/webapp/app/views/articles/show.html.erb",
+		"/C/Sites/webapp/app/controllers/comentarios_controller.rb",
+		"/C/Sites/webapp/app/views/welcome/index.html.erb",
+		"/C/Sites/webapp/app/views/articles/index.html.erb",
+		"/C/Sites/webapp/app/models/commeent.rb",
+		"/C/Sites/webapp/db/migrate/20160920170120_create_commeents.rb"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"%>",
+			"<\n",
+			"migration"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "C:\\Sites\\webpage"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "_form.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 670,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								670
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 528,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								326,
+								377
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 374.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

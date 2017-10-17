@@ -1,0 +1,21 @@
+<%= form_for @article do |f| %>
+  <% if @article.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@article.errors.count, "error") %> encontrados al guardar este articulo:</h2>
+    <ul>
+    <% @article.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <div class="field">
+    <%= f.text_field :title, placeholder: "Titulo", class: "form-control"%>    
+  </div>
+   <div class="field">
+    <%= f.text_area :text, placeholder: "Escibe aqui el articulo", style: "height:250px;", class: "form-control" %>    
+  </div>
+  <p>
+    <%= f.submit "Guardar", class: "btn be-red white"%>
+  </p>
+<% end %>
