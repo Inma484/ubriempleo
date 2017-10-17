@@ -1,0 +1,13 @@
+<div class="jumbotron">
+	<h1><%= @post.title %></h1>
+	<div><%= @post.contenido %></div>
+</div>
+<div class="text-right">
+	<% if @post.user and user_signed_in? and @post.user == current_user%>
+		<%= link_to 'Editar', edit_post_path(@post) %> |
+		<%= link_to 'Eliminar', @post, method: :delete, data: {confirm: "¿Estás seguro?"}%> |
+	<% end -%>
+	<%= link_to 'volver', posts_path %>
+</div>
+
+

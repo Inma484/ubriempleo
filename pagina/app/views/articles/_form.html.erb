@@ -1,0 +1,32 @@
+<%= form_for @article,  :html => { :multipart => true }   do |f| %>
+  <% if @article.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@article.errors.count, "error") %> encontrados al guardar este articulo:</h2>
+    <ul>
+    <% @article.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <div class="field">
+    <%= f.text_field :title, placeholder: "Titulo", class: "form-control"%>    
+  </div>
+  <div class="field">
+    Portada:<%= f.file_field :cover%>    
+  </div>
+   <div class="field">
+    <%= f.text_area :body, placeholder: "Escibe aqui el articulo", style: "height:250px;", class: "form-control" %>    
+  </div>
+  <div class="field">
+    <label>Categorias:</label>
+    <% @categories.each do |category|%>
+    <div class="field">
+      <%= check_box_tag "categories[]", category.id%> <%=category.name%> <!--asignamos a un array todos los valores que tenga category-->
+    </div>
+    <% end -%>
+  </div>
+  <p>
+    <%= f.submit "Guardar", class: "btn be-red white"%>
+  </p>
+<% end %>

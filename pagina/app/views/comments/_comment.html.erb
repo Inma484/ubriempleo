@@ -1,0 +1,18 @@
+<article>
+	<header class="text-right be-samll">
+		<%= time_ago_in_words(comment.created_at)%> ago - 
+		<%= link_to "Borrar", [@article,comment], class:"red"%> 
+	</header>
+	<div class="row">
+		<div class="col-xs-1 com-md-1">
+			<div class="box">
+				<%= image_tag(comment.user.avatar)%>
+			</div>
+		</div>
+		<div class="col-xs-11 com-md-10">
+			<div class="box">
+				<%=comment.body%>
+			</div>
+		</div>
+	</div>
+</article>

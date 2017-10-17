@@ -1,0 +1,13 @@
+<div class="container-fluid">
+	<p id="notice"><%= notice %></p>
+
+	<h1 style="color: <%=@category.color%>;"><%=@category.name%></h1>
+	<div class="row">
+		<%= render @category.articles %>
+	</div>
+	<div class="top-space be-blue">
+		<%= link_to 'Editar Categoria', edit_category_path(@category) %>   |
+		<%= link_to 'Volver', categories_path %>
+	</div>
+	
+</div>
