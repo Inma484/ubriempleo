@@ -1,0 +1,37 @@
+<div class="box">
+    <h2 id="ini-sesion"><i class="fa fa-user-o"></i> Registrarse</h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <br>
+      <div>
+        
+      </div>
+      <div id="ini-sesion">
+        <i id = icon class="fa fa-envelope" ></i>
+        <%= f.email_field :email, autofocus: true, placeholder: "Email",class:"inicio" %>
+      </div>
+      <br/>
+      <div  id="ini-sesion">
+        <i id = icon class="fa fa-key" ></i>
+        <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña (6 carácteres mínimos)",class:"inicio" %>
+      </div>
+      <br/>  
+      <div id="ini-sesion">
+        <i id = icon class="fa fa-key" ></i>
+        <%= f.password_field :password_confirmation, autocomplete: "off",placeholder: "Repita Contraseña", class:"inicio" %>
+      </div>
+      
+      <div class="check_box ">
+        <br/>
+        <%= f.radio_button(:role, "empresa") %><%=f.label(:role_empresa, "Empresas")%>
+        <%= f.radio_button(:role, "trabajador") %><%=f.label(:role_trabajdor, "Demandantes")%>
+      </div>
+      <div id="ini-sesion">
+        </br>
+        <%= f.submit "Registrarse", class:"boton ini-sesion" %>
+      </div>
+    <% end %>
+  
+</div>
+

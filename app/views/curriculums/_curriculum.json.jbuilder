@@ -1,0 +1,2 @@
+json.extract! curriculum, :id, :name, :apellido_1, :apellido_2, :direccion, :phone, :email, :fecha_nac, :cargo1, :cargo2, :cargo3, :datos_i, :user_id, :category_id, :created_at, :updated_at
+json.url curriculum_url(curriculum, format: :json)

@@ -1,0 +1,6 @@
+class Category < ApplicationRecord
+	validates :name , presence: true
+	has_many :posts, dependent: :destroy
+	has_many :curriculums, dependent: :destroy
+end
+ 

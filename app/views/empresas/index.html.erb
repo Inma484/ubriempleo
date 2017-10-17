@@ -1,0 +1,30 @@
+<section id = "site-body"> 
+   <div>
+    <%= image_tag 'empresas.jpg', width:"100%", height:"100%", margin: 'auto' %>
+  </div>
+  <table class="table-site">
+    <tbody>
+      <tr>
+        <% if current_user.role == 'empresa'%>
+          <% if Empresa.exists?(:user_id => current_user.id)%> <!--Buscamos en la tabla empresas si existe algun registo cuyo user_id sea el del usuario logeado  si existe, mostramos la empresa en caso contrario mostramos el link para crear el perfil de empresa del usuario empresa-->
+            <% controller.redirect_to (@empresa)%>
+          <%else %>
+            <% controller.redirect_to new_empresa_path %> 
+         <% end %>
+        <% end %>
+      </tr>
+   
+      <%if can? :read, Empresa and current_user.role == 'trabajador' or current_user.role == 'admin'%>
+        <% @empresas.each do |empresa|%>
+          <tr>
+            <td><%= link_to empresa.name, empresa,  id:"empresa"%></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</section>
+
+
+
+

@@ -1,0 +1,86 @@
+@media screen and (max-width: 840px){
+	header nav {
+		width: 100% ;
+		display: inline;
+		
+		position: fixed;
+	}
+	header nav ul {
+			margin-left: 0;
+			padding-left: 1px;
+
+	}
+	header nav ul li{
+		
+		display:inline;
+		line-height: 1px;
+
+	}
+	header nav ul li a{
+		font-size: 11px !important;
+		padding: 5px !important;
+	
+	}
+	.editar-avatar{
+		font-size: 15px !important;
+	}
+
+	.infop{
+		font-size: 18px;
+	}
+	.campo{
+		font-size: 12px ;
+	}
+	.nombre{
+		font-size: 13px ;
+	}
+	.direccion{
+		font-size: 13px ;
+	}
+	.campodir{
+		font-size: 12px ;
+	}
+	.datos{
+		font-size: 13px;
+	}
+	.campodat{
+		font-size: 12px;
+	}
+	.fecha{
+		font-size: 13px;
+	}
+	.campofecha{
+		font-size: 12px;
+	}
+	
+	.campocargo{
+		font-size: 12px;
+	}
+
+	.reg a{
+		font-size: 20px !important;
+	}
+	
+	.welcome p{
+		font-size: 18px !important;
+		
+	}
+	.texto{
+		
+		p{
+			font-size: 13px !important;
+		}
+
+	}
+	#listado{
+		display: none;
+	}
+
+	.empresa{
+		font-size: 13px !important;
+	}
+
+	.detalle-empresa{
+		font-size: 20px !important;
+	}
+}

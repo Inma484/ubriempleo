@@ -1,0 +1,35 @@
+<section id="site-body">
+	<%if current_user.role == 'trabajador'%>
+		<legend id="listado">Ofertas de empleo para: <%= @category.name%></legend>
+
+		<% @category.posts.each do |post|%>
+			<article id="post">
+				<div style="text-align: left; font-size: 20px"><%= link_to post.title, post, class:"link"%>  |  <i class="fa fa-calendar" aria-hidden="true"></i> <%= post.created_at.to_date.strftime"%d-%m-%y"%></div>
+	            <p style="font-size: 18px; text-align: left; margin: 15px; padding-bottom: 13px;"><%=truncate(post.body, length:50)%></p>
+	            <div style="text-align: right;margin-right: 20px"><%= link_to "Ver Detalle", post, class:"ver"%></div>
+			</article>
+		<% end %>
+		
+		<div class="volver">
+			<%= link_to 'Volver', categories_path, :id=>"volver" %>	
+		</div>
+	<%else%>
+		<%if current_user.role == "empresa" or current_user.role=='admin'%>
+			<legend id="listado">Listado de candidatos para : <%= @category.name%></legend>
+			<p id="info">Pulsa encima del candidato para visualizar su Currículum Vitae</p>
+			<div style="overflow: -x:auto">
+			<table class="listcandi">
+				<% @category.curriculums.each do |curriculum|%>
+					<tr>
+						<td>
+						<%= link_to curriculum.name, curriculum, id:'listcandi'%>  <%= link_to curriculum.apellido_1, curriculum,id:'listcandi'%>  <%= link_to curriculum.apellido_2, curriculum,id:'listcandi'%>
+						</td>
+					</tr>
+				<% end -%>
+			</table>
+			</div>
+		<% end -%>
+	<% end -%>
+	
+</section>
+

@@ -1,0 +1,40 @@
+<section id = "site-body">
+  <p id="titulo"><%= @empresa.name %></p>
+  <article id = "post">
+    <div class="flex-container-2">
+      <div class="flex-item logo">
+        <%= image_tag(@empresa.logo.url(:original),  class:"w3-round center",style:"width:100%") %>
+      </div>
+      <div class ="empresa flex-item">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <%= @empresa.direccion %></br>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <%= @empresa.email %></br>
+          <i class="fa fa-external-link" aria-hidden="true"></i>
+          <%= link_to @empresa.web, "http://#{@empresa.web}" %></br>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <%= @empresa.phone %></br>
+      </div>
+    </div>
+    <div class="detalle-empresa">
+      <%= @empresa.descripcion %><br>
+    </div>
+   
+  </article>
+  </br> 
+  <div>
+    
+    <%if current_user == @empresa.user and current_user.role == 'empresa' or current_user.role == 'admin'%>
+      <div class="edicion">
+         <div class="items"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i><%= link_to 'Editar Empresa', edit_empresa_path(@empresa) %></div>
+         <div class="items"><i class="fa fa-trash-o" aria-hidden="true"></i> <%= link_to 'Eliminar perfil', empresa_path(@empresa), method: :delete, data: { confirm: 'Estas seguro?'} %></div>
+      </div>
+
+    <% end %>
+    <%if current_user.role == 'admin'%>
+      <div class="edicion">
+         <div class="items"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i><%= link_to 'Editar Empresa', edit_empresa_path(@empresa) %> 
+      </div>
+    <% end %>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<div class="box">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div  id="ini-sesion">
+    <%= f.label :password, "Nueva contraseña" %><br />
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> carácteres mínimos)</em><br />
+    <% end %>
+    <%= f.password_field :password, autofocus: true, autocomplete: "off", class:"inicio" %>
+  </div>
+<br>
+  <div  id="ini-sesion">
+    <%= f.label :password_confirmation, "Confirma la nueva contraseña" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", class:"inicio" %>
+  </div>
+<br>
+  <div  id="ini-sesion">
+    <%= f.submit "Cambiar" , class:"boton ini-sesion"%>
+  </div>
+<% end %>
+</div>
+

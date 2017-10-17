@@ -1,0 +1,67 @@
+/*inicio sesion y registro*/
+#ini-sesion{
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+.box{
+	color: white;
+	box-sizing: border-box;
+	border-radius: 8px;
+	background-color:#4c6a92;
+	margin: 15%;
+	opacity: 0.8;
+	padding: 10px 0 15px 0;
+
+}
+
+.inicio{
+	border: none;
+	border-bottom: 1px solid;
+	outline: none;
+	font-family: 'Roboto', sans-serif;
+	padding: 8px -3px 0px 0px;
+	font-size: 19px;
+	width: 50%;
+	-webkit-box-shadow: 1px 2px 5px rgb(0,0,0);
+	-moz-box-shadow: 1px 2px 5px rgb(0,0,0); 
+
+}
+
+#icon{
+	display: inline-block;
+	width: 30px;
+	background-color: #707070;
+	padding: 8px 1px 8px 8px;
+	-moz-border-radius: 4px 0px 0px 4px; 
+	border-radius: 4px 0px 0px 4px;
+	color: white;
+	-webkit-box-shadow: 1px 2px 5px rgb(0,0,0);
+	-moz-box-shadow: 1px 2px 5px rgb(0,0,0); 
+	border: solid 0px #cbc9c9;
+}
+
+.check_box{
+	display: block;
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	word-spacing: 50px;
+	color: white;
+
+}
+
+.boton{
+	background-color:#707070;
+	padding: 8px 15px 8px 15px;
+	border-radius: 4px 4px 4px 4px;
+	color:white;
+	-webkit-box-shadow: 1px 2px 5px rgb(0,0,0);
+	border: solid 0px #cbc9c9;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+}
+.actions{
+	text-align: center;
+	 a{ text-decoration:none; };
+}
+/*end inicio sesion y registro*/
