@@ -17,8 +17,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    #@empresa = Empresa.find_by(params[:user_id])
-    @empresa = Empresa.find_by_user_id(current_user.id) #buscar en la tabla empresa el user_id que sea igual al id del actual usuarios
+    @empresa = Empresa.find_by(params[:user_id])
+   # @empresa = Empresa.find_by_user_id(current_user.id) #buscar en la tabla empresa el user_id que sea igual al id del actual usuarios
 
   end
 
